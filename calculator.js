@@ -15,3 +15,24 @@ try {
     display.value = "Error";
 }
 }
+
+function deleteLast(){
+    display.value = display.value.slice(0, -1);
+}
+
+document.addEventListener("keydown", (event) => {
+    const key = event.key;
+    if (/[0-9]/.test(key)) {
+        appendToDisplay(key);
+    } else if (["+", "-", "*", "/"].includes(key)) {
+        appendToDisplay(key);
+    } else if (key === ".") {
+        appendToDisplay(key);
+    } else if (key === "Enter" || key === "=") {
+        calculate();
+    } else if (key === "Backspace") {
+        deleteLast();
+    } else if (key === "Escape") {
+        clearDisplay();
+    }
+});
