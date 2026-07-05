@@ -1,0 +1,3 @@
+## 2025-05-14 - DOM Shadowing vs. Human Perception
+**Learning:** For human-interactive events (clicks), shadowing the DOM in a local variable is often a premature micro-optimization that can lead to functional regressions (e.g., breaking keyboard input synchronization). A more effective optimization in this context is bypassing expensive engines like `eval()` for redundant operations (e.g., when the display is already a static number).
+**Action:** Prioritize optimizations that bypass expensive computations (`eval`, heavy logic) over those that reduce already-fast DOM reads, unless high-frequency updates are involved.
