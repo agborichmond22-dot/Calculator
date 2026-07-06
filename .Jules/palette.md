@@ -1,0 +1,3 @@
+## 2025-05-14 - [Accessibility and Keyboard Navigation]
+**Learning:** Adding descriptive ARIA labels to operator buttons is crucial for screen readers, as symbols like '⌫' or 'C' can be ambiguous. Also, providing visible focus states is essential for keyboard navigation, as many users rely on the keyboard to interact with the UI. In this environment, CRLF line endings in existing files can make git merge diffs fragile, so `write_file` is often more reliable for small updates.
+**Action:** Always check for descriptive ARIA labels on functional icons and ensure `:focus-visible` styles are implemented for interactive elements.

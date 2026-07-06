@@ -60,3 +60,7 @@ button:active{
 .operator-btn:active{
     background-color: #3F88C5;
 }
+button:focus-visible {
+    outline: 4px solid #4361EE;
+    outline-offset: 2px;
+}

@@ -3,13 +3,13 @@
    <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculator</title>    
+    <title>Calculator</title>
     <link rel="stylesheet" href="calculator.css">
    </head>
    <body>
-    
+
     <div id="calculator">
-        <input id="display" readonly>
+        <input id="display" readonly aria-live="polite" aria-label="Calculator display">
         <div id="keys">
             <button onclick="appendToDisplay('7')">7</button>
             <button onclick="appendToDisplay('8')">8</button>
@@ -21,15 +21,16 @@
             <button onclick="appendToDisplay('2')">2</button>
             <button onclick="appendToDisplay('3')">3</button>
             <button onclick="appendToDisplay('0')">0</button>
-            <button onclick="appendToDisplay('.')" class="operator-btn">.</button>
-            <button onclick="clearDisplay()" class="operator-btn">C</button>
-            <button onclick="deleteLast()" class="operator-btn">⌫</button>
-            <button onclick="calculate()" class="operator-btn">=</button>
-            <button onclick="appendToDisplay('+')" class="operator-btn">+</button>
-            <button onclick="appendToDisplay('-')" class="operator-btn">-</button>
-            <button onclick="appendToDisplay('*')" class="operator-btn">X</button>
-            <button onclick="appendToDisplay('/')" class="operator-btn">/</button> 
+            <button onclick="appendToDisplay('.')" class="operator-btn" aria-label="Decimal">.</button>
+            <button onclick="clearDisplay()" class="operator-btn" aria-label="Clear">C</button>
+            <button onclick="deleteLast()" class="operator-btn" aria-label="Backspace">⌫</button>
+            <button onclick="calculate()" class="operator-btn" aria-label="Equals">=</button>
+            <button onclick="appendToDisplay('+')" class="operator-btn" aria-label="Add">+</button>
+            <button onclick="appendToDisplay('-')" class="operator-btn" aria-label="Subtract">-</button>
+            <button onclick="appendToDisplay('*')" class="operator-btn" aria-label="Multiply">X</button>
+            <button onclick="appendToDisplay('/')" class="operator-btn" aria-label="Divide">/</button>
         </div>
     </div>
     <script src="calculator.js"></script>
    </body>
+</html>
