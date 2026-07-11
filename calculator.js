@@ -15,3 +15,28 @@ try {
     display.value = "Error";
 }
 }
+
+function deleteLast(){
+    display.value = display.value.toString().slice(0, -1);
+}
+
+document.addEventListener("keydown", (event) => {
+    const key = event.key;
+    if (key >= "0" && key <= "9") {
+        appendToDisplay(key);
+    } else if (["+", "-", "*", "/"].includes(key)) {
+        appendToDisplay(key);
+    } else if (key.toLowerCase() === "x") {
+        appendToDisplay("*");
+    } else if (key === ".") {
+        appendToDisplay(".");
+    } else if (key === "Enter") {
+        if (document.activeElement.tagName !== "BUTTON") {
+            calculate();
+        }
+    } else if (key === "Backspace") {
+        deleteLast();
+    } else if (key === "Escape") {
+        clearDisplay();
+    }
+});
