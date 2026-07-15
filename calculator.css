@@ -17,6 +17,7 @@ body{
 
 #display{
     width: 100%;
+    box-sizing: border-box;
     background-color: #E0E1DD;
     color: #0D1B2A;
     font-size: 40px;
@@ -43,20 +44,31 @@ button{
     font-size: 20px;
     font-weight: bold;
     cursor: pointer;
-} 
+    transition: background-color 0.2s, outline 0.2s;
+}
+
 button:hover{
     background-color: #4361EE;
 
 }
+
 button:active{
     background-color: #3F88C5;
 }
+
+button:focus-visible {
+    outline: 4px solid #4361EE;
+    outline-offset: 2px;
+}
+
 .operator-btn{
     background-color: orangered;
 }
+
 .operator-btn:hover{
     background-color: #4361EE;
 }
+
 .operator-btn:active{
     background-color: #3F88C5;
 }
