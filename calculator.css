@@ -4,7 +4,6 @@ body{
     justify-content: center;
     align-items: center;
     height: 100vh;
-
 }
 
 #calculator{
@@ -23,8 +22,8 @@ body{
     padding: 20px;
     text-align: left;
     border: white solid 2px;
+    box-sizing: border-box;
 }
-
 
 #keys{
     display: grid;
@@ -43,20 +42,30 @@ button{
     font-size: 20px;
     font-weight: bold;
     cursor: pointer;
-} 
+    transition: background-color 0.2s ease, outline 0.2s ease;
+}
+
 button:hover{
     background-color: #4361EE;
-
 }
+
 button:active{
     background-color: #3F88C5;
 }
+
+button:focus-visible{
+    outline: 4px solid #4361EE;
+    outline-offset: 2px;
+}
+
 .operator-btn{
     background-color: orangered;
 }
+
 .operator-btn:hover{
     background-color: #4361EE;
 }
+
 .operator-btn:active{
     background-color: #3F88C5;
 }
