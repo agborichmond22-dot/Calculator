@@ -1,0 +1,3 @@
+## 2026-07-17 - Strictness of Number.isFinite in JS Evaluation Bypass
+**Learning:** When bypassing `eval()` with identity/numeric regex checks, converting results to strings or failing to parse strings prior to calling `Number.isFinite()` causes incorrect "Error" handling. This is because strict `Number.isFinite()` does not perform type coercion on strings (unlike the global `isFinite()` function), returning `false` for strings like `"5"`.
+**Action:** Always maintain the result as a primitive number when validating with `Number.isFinite()` before letting the DOM display convert the value back to a string implicitly.
