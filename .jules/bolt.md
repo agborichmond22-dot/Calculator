@@ -1,0 +1,3 @@
+## 2025-07-19 - JavaScript Eval Bypass Optimization
+**Learning:** Bypassing `eval()` for numeric identity checks (`/^-?\d*\.?\d+$/`) and single-operator simple arithmetic expressions (`/^([+-]?\d*(?:\.\d+)?)([+\-*/])([+-]?\d*(?:\.\d+)?)$/`) yields significant speedups (~3.7x and ~1.3x respectively) in Node.js/V8 because it avoids spawning a parser/compiler instance. Strict `Number.isFinite()` on primitive numbers handles division by zero safely, and bypassing numeric identities prevents octal parsing bugs (like '012' evaluated as 10 instead of 12) inherent to `eval()`.
+**Action:** Use fast regex-based AST/expression pre-parsing bypasses before falling back to heavy dynamic execution engines like `eval()`.
