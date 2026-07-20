@@ -1,0 +1,3 @@
+## 2025-07-20 - Benchmarking JavaScript calculation approaches
+**Learning:** For typical numeric values and basic binary arithmetic operations, using Regex parsers and JavaScript native arithmetic bypasses `eval()` which yields massive performance speedups (approx. 4.1x for simple identity and 1.2x for binary arithmetic in this environment) and avoids the overhead/security risks of the full JS engine parser.
+**Action:** Implement regex bypasses for common, simple arithmetic expressions before resorting to eval(), and always check for finite results using Number.isFinite() on numbers, not strings.
