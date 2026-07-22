@@ -1,0 +1,3 @@
+## 2026-07-22 - Regex Bypass Optimization for simple math expressions
+**Learning:** `eval()` is slow for simple expressions. A fast regex-based parser can identify and perform arithmetic operations natively without JS engine eval compilation overhead. When performing this, strict validation checks like `Number.isFinite()` on the primitive result prevent NaN or Infinity leakage.
+**Action:** Always prefer regex fast-paths for simple mathematical expressions and normalize input, while retaining `eval()` only as a fallback for complex structures. Ensure strict `Number.isFinite()` checks are done on primitive values.
