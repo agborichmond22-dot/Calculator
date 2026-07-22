@@ -1,0 +1,3 @@
+## 2025-07-22 - Improved Keyboard Navigation and Accessibility Focus States in Calculator
+**Learning:** In highly interactive visual applications like web-based calculators, default focus styles are often non-existent or hard to distinguish. Implementing a highly visible `button:focus-visible` outline using a vibrant, contrasting color (`#4361EE`) along with a small outline offset (`2px`) significantly aids users navigating with keyboard tab key, making keyboard-only navigation tactile and intuitive.
+**Action:** When designing interface controls, explicitly override `:focus-visible` with high-contrast, accessible outlines, and include smooth CSS transitions to prevent visual jank when navigating or clicking.
