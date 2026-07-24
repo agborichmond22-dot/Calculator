@@ -1,0 +1,3 @@
+## 2025-07-24 - Enhance Accessibility and Focus States in Calculator UI
+**Learning:** Icon-only buttons (like `⌫` or `C`) and visual-only text buttons (like `X` instead of `*`) are screen-reader inaccessible unless they have descriptive `aria-label` attributes. Furthermore, interactive web elements must have highly visible focus states (such as `outline` with `focus-visible`) to assist users navigating purely via the keyboard.
+**Action:** Always provide explicit ARIA labels to operator and functional icon buttons, use `aria-live="polite"` on active elements like calculator displays to notify changes, and implement a custom focus-visible style that matches the application's color theme.
